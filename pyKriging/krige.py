@@ -376,11 +376,11 @@ class kriging(matrixops):
             # ea.observer = inspyred.ec.observers.stats_observer
             final_pop = ea.evolve(generator=self.generate_population,
                                   evaluator=self.fittingObjective,
-                                  pop_size=300,
+                                  pop_size=50,
                                   maximize=False,
                                   bounder=ec.Bounder(lowerBound, upperBound),
                                   max_evaluations=30000,
-                                  neighborhood_size=20,
+                                  neighborhood_size=10,
                                   num_inputs=self.k)
             # Sort and print the best individual, who will be at index 0.
             final_pop.sort(reverse=True)
